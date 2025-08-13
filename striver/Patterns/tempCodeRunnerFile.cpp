@@ -1,0 +1,1 @@
+inversePyramid(n);

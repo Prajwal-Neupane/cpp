@@ -26,10 +26,145 @@ void halfPyramid(int n)
     }
 }
 
+void numberPyramid(int n)
+{
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j <= i; j++)
+        {
+            std::cout << j;
+        }
+        std::cout << std::endl;
+    }
+}
+
+void number2Pyramid(int n)
+{
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j <= i; j++)
+        {
+            std::cout << i;
+        }
+        std::cout << std::endl;
+    }
+}
+
+void inversePyramid(int n)
+{
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 5; j >= i; j--)
+        {
+            std::cout << "*";
+        }
+        std::cout << std::endl;
+    }
+}
+
+void inverseNumberPyramid(int n)
+{
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j <= n - i + 1; j++)
+        {
+            std::cout << j;
+        }
+        std::cout << std::endl;
+    }
+}
+
+void pyramid(int n)
+{
+    for (int i = 1; i <= n; i++)
+    {
+        // space
+        for (int j = 1; j <= n - i; j++)
+        {
+            std::cout << " ";
+        }
+        // Star
+        for (int j = 1; j <= 2 * i - 1; j++)
+        {
+            std::cout << "*";
+        }
+        // Space
+        for (int j = 1; j <= n - i; j++)
+        {
+            std::cout << " ";
+        }
+        std::cout << std::endl;
+    }
+}
+
+void reversePyramid(int n)
+{
+    for (int i = 1; i <= n; i++)
+    {
+        // Space
+        for (int j = 1; j < i; j++)
+        {
+
+            std::cout << " ";
+        }
+        // Star
+        for (int j = 1; j <= 2 * (n - i) + 1; j++)
+        {
+            std::cout << "*";
+        }
+        // Space
+        for (int j = 1; j < i; j++)
+        {
+
+            std::cout << " ";
+        }
+
+        std::cout << std::endl;
+    }
+}
+void combineHalfPyramidAndInversePyramid(int n)
+{
+    for (int i = 1; i <= 2 * n - 1; i++)
+    {
+        int stars = i;
+        if (i > n)
+            stars = 2 * n - i;
+        for (int j = 1; j <= stars; j++)
+        {
+            std::cout << "*";
+        }
+        std::cout << std::endl;
+    }
+}
+void binaryHalfPyramid(int n)
+{
+    int start = 0;
+    for (int i = 1; i <= n; i++)
+    {
+        if (i % 2 == 0)
+            start = 0;
+        else
+            start = 1;
+        for (int j = 1; j <= i; j++)
+        {
+            std::cout << start;
+            start = 1 - start;
+        }
+        std::cout << std::endl;
+    }
+}
 int main()
 {
     int n;
     std::cin >> n;
     // printRectangle(n);
-    halfPyramid(n);
+    // halfPyramid(n);
+    // numberPyramid(n);
+    // number2Pyramid(n);
+    // inversePyramid(n);
+    // inverseNumberPyramid(n);
+    // pyramid(n);
+    // reversePyramid(n);
+    // combineHalfPyramidAndInversePyramid(n);
+    binaryHalfPyramid(n);
 }
