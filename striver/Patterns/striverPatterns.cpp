@@ -192,32 +192,52 @@ void increaseNumberPyramid(int n)
 }
 void alphabetHalfPyramid(int n)
 {
-    char code = 'A';
     for (int i = 1; i <= n; i++)
     {
+        char code = 'A';
         for (int j = 1; j <= i; j++)
         {
 
             std::cout << code;
             code++;
         }
-        code = 'A';
+        // code = 'A';
         std::cout << std::endl;
     }
 }
 void reverseAlphabetHalfPyramid(int n)
 {
-    char code = 'A';
     for (int i = 1; i <= n; i++)
     {
+        char code = 'A';
         for (int j = n; j >= i; j--)
         {
             std::cout << code;
             code++;
         }
         std::cout << std::endl;
-        code = 'A';
+        // code = 'A';
     }
+}
+void reverseDigitAlphabetHalfPyramid(int n)
+{
+    for (int i = 1; i <= n; i++)
+    {
+        char alphabet = 'A' + char(n - i);
+        for (int j = 1; j <= i; j++)
+        {
+            std::cout << alphabet << " ";
+            alphabet++;
+        }
+        std::cout << std::endl;
+        // alphabet = 'A' + char(n - 1);
+    }
+}
+
+void practicePrinting()
+{
+    char alphabet = 'A';
+    std::cout << alphabet + 1;
 }
 int main()
 {
@@ -235,6 +255,8 @@ int main()
     // binaryHalfPyramid(n);
     // numberHollowPyramid(n);
     // increaseNumberPyramid(n);
-    // alphabetHalfPyramid(n);
+    alphabetHalfPyramid(n);
     reverseAlphabetHalfPyramid(n);
+    // reverseDigitAlphabetHalfPyramid(n);
+    // practicePrinting();
 }
