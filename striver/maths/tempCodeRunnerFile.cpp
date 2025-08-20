@@ -1,5 +1,8 @@
- // if (lastDigit != 0)
-        // {
-
-        //     number = number * 10 + lastDigit;
-        // }
+ if (result == n)
+    {
+        std::cout << "Armstrong";
+    }
+    else
+    {
+        std::cout << "Not Armstrong";
+    }
