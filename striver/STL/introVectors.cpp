@@ -68,6 +68,12 @@ void explainVector()
 
     // {10, 20, 40, 50, 33, 34, 23}  [start, end)
     vec.erase(vec.begin() + 1, vec.begin() + 4); // It will delete {20} and {40, 50}. The final vector will be {10,33, 34, 23}
+
+    // Vector Insertion
+
+    std::vector<int> v2(2, 100);      // {100, 100}
+    v2.insert(v2.begin(), 300);       // {300, 100, 100}
+    v2.insert(v2.begin() + 1, 2, 50); // {300, 50, 50, 100, 100}
 }
 
 int main()
